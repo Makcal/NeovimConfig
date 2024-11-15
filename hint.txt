@@ -1,0 +1,7 @@
+Theme: onedark
+Set statusline_bg to "" in ~/.local/share/nvim/lazy/base46/lua/base46/themes/onedark.lua
+
+/usr/share/nvchad/init.lua:
+1. Change NvChad's base46 dir
+2. Add "custom/plugins" for Lazy setup
+
