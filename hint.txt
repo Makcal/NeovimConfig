@@ -1,5 +1,6 @@
 Theme: onedark
-Set statusline_bg to "" in ~/.local/share/nvim/lazy/base46/lua/base46/themes/onedark.lua
+Set `statusline_bg` to "" in ~/.local/share/nvim/lazy/base46/lua/base46/themes/onedark.lua
+Set `line` to "#51555d"
 
 /usr/share/nvchad/init.lua:
 1. Change NvChad's base46 dir

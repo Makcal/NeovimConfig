@@ -32,25 +32,5 @@ local plugins = {
 		"tpope/vim-surround",
 		lazy = false,
 	},
-	{
-		"xiyaowong/transparent.nvim",
-		lazy = false,
-	},
-	{
-		"nvzone/volt",
-		lazy = true,
-	},
-	{
-		"nvzone/menu",
-		lazy = false,
-	},
-	{
-		"nvzone/minty",
-		cmd = { "Shades", "Huefy" },
-	},
-	{
-		"nvchad/base46",
-		lazy = false,
-	},
 }
 return plugins
