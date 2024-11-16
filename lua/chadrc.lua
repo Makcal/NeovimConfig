@@ -42,4 +42,12 @@ local M = {
 		},
 	},
 }
+
+vim.api.nvim_create_autocmd(
+    "VimEnter",
+    {
+        command = "hi @comment guifg=grey"
+    }
+)
+
 return M
