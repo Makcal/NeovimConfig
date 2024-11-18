@@ -99,3 +99,7 @@ vnoremap <C-f> "hy/\<<C-r>h\><CR>N
 
 " Help tab
 nnoremap H K
+
+" LSP signature overloads
+inoremap <C-m> <cmd>LspOverloadsSignature<CR>
+

@@ -15,6 +15,13 @@ local plugins = {
 		end,
 	},
 	{
+		"Issafalcon/lsp-overloads.nvim",
+		lazy = false,
+		config = {
+			display_automatically = true,
+		},
+	},
+	{
 		"jiaoshijie/undotree",
 		dependencies = "nvim-lua/plenary.nvim",
 		config = true,
