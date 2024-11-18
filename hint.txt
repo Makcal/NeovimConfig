@@ -6,3 +6,7 @@ Set `line` to "#51555d"
 1. Change NvChad's base46 dir
 2. Add "custom/plugins" for Lazy setup
 
+/usr/share/nvchad/lua/mappings.lua:
+/usr/share/nvim/runtime/lua/mappings.lua:
+1. Disable default ugly mappings
+
