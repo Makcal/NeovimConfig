@@ -25,6 +25,7 @@ local M = {
 			NvimTreeNormalNC = { bg = "NONE" },
 			NvimTreeWinSeparator = { bg = "NONE", fg = "white" },
 			NvimTreeCursorLine = { bg = "NONE" },
+			CursorLine = { bg = "NONE" },
 
 			TelescopeNormal = { bg = "NONE" },
 			TelescopeBorder = { bg = "NONE", fg = "white" },
