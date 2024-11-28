@@ -65,7 +65,7 @@ nnoremap <M-Down> ^:IMoveNodeWithRight<CR>
 nnoremap <M-s> :ISwapWithRight<CR>
 
 " Quit without save
-nnoremap <C-q><C-q> :wqa<CR>
+nnoremap <C-q><C-q> <cmd>wa<CR><cmd>qa<CR>
 
 " changes to the directory on each buffer change
 "set autochdir
