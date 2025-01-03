@@ -103,3 +103,6 @@ nnoremap H K
 " LSP signature overloads
 inoremap <C-m> <cmd>LspOverloadsSignature<CR>
 
+" Treat .h as C header
+let g:c_syntax_for_h = 1
+
