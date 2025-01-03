@@ -23,8 +23,8 @@ lspconfig.clangd.setup({
 	capabilities = capabilities,
 	filetypes = { "c", "cpp" },
 	init_options = {
-		fallbackFlags = { "--std=c++23" },
-		-- fallbackFlags = { "--std=c23" },
+--		 fallbackFlags = { "--std=c++23" },
+		fallbackFlags = { "--std=c23" },
 	},
 })
 
@@ -33,3 +33,11 @@ lspconfig.hls.setup({
 	capabilities = capabilities,
 	filetypes = { "haskell", "lhaskell" },
 })
+
+-- lspconfig.java_language_server.setup({
+-- 	on_attach = on_attach,
+-- 	capabilities = capabilities,
+-- 	filetypes = { "java" },
+-- 	cmd = { "/home/max/.local/share/nvim/mason/packages/java-language-server/dist/lang_server_linux.sh" },
+-- })
+
