@@ -86,10 +86,10 @@ inoremap <C-s> <cmd>w<CR>
 inoremap <C-p> <cmd>lua vim.lsp.buf.signature_help()<CR>
 
 " Around without leading spaces
-nmap ya y2i
-nmap va v2i
-nmap da d2i
-nmap ca c2i
+"nmap ya y2i
+"nmap va v2i
+"nmap da d2i
+"nmap ca c2i
 
 " Replace selected
 vnoremap <C-r> "hy:%s/\<<C-r>h\>//gc<left><left><left>
