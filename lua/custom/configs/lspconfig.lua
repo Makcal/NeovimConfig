@@ -23,8 +23,26 @@ lspconfig.clangd.setup({
 	capabilities = capabilities,
 	filetypes = { "c", "cpp" },
 	init_options = {
---		 fallbackFlags = { "--std=c++23" },
-		fallbackFlags = { "--std=c23" },
+		fallbackFlags = { "--std=c++23" },
+		--		fallbackFlags = { "--std=c11" },
+	},
+    -- I don't really understand what it is. Just copied from
+    -- https://github.com/williamboman/nvim-lsp-installer/discussions/392
+    -- and https://github.com/fitrh/init.nvim/blob/7127fbef569ee498b1cbfae62ef372050b07afbc/lua/lsp/config/clangd.lua#L14
+    -- and https://www.reddit.com/r/neovim/comments/pxd2og/clangtidy_for_neovim/
+	cmd = {
+		"clangd",
+		"--background-index",
+		"-j=12",
+		"--query-driver=/usr/bin/**/clang-*,/bin/clang,/bin/clang++,/usr/bin/gcc,/usr/bin/g++",
+		"--clang-tidy",
+		"--clang-tidy-checks=*",
+		"--all-scopes-completion",
+		"--cross-file-rename",
+		"--completion-style=detailed",
+		"--header-insertion-decorators",
+		"--header-insertion=iwyu",
+		"--pch-storage=memory",
 	},
 })
 
@@ -40,4 +58,3 @@ lspconfig.hls.setup({
 -- 	filetypes = { "java" },
 -- 	cmd = { "/home/max/.local/share/nvim/mason/packages/java-language-server/dist/lang_server_linux.sh" },
 -- })
-
