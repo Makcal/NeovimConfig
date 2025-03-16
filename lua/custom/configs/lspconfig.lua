@@ -24,7 +24,7 @@ lspconfig.clangd.setup({
 	filetypes = { "c", "cpp" },
 	init_options = {
 		fallbackFlags = { "--std=c++23" },
-		--		fallbackFlags = { "--std=c11" },
+--				fallbackFlags = { "--std=c11" },
 	},
     -- I don't really understand what it is. Just copied from
     -- https://github.com/williamboman/nvim-lsp-installer/discussions/392
@@ -58,3 +58,8 @@ lspconfig.hls.setup({
 -- 	filetypes = { "java" },
 -- 	cmd = { "/home/max/.local/share/nvim/mason/packages/java-language-server/dist/lang_server_linux.sh" },
 -- })
+
+lspconfig.cmake.setup({
+    on_attach = on_attach,
+    capabilities = capabilities,
+})

@@ -56,11 +56,15 @@ local plugins = {
 			vim.diagnostic.config({
 				virtual_text = false,
 			})
-            require('lsp_lines').setup()
+			require("lsp_lines").setup()
 		end,
-        dependencies = {
-            "neovim/nvim-lspconfig"
-        },
+		dependencies = {
+			"neovim/nvim-lspconfig",
+		},
+		lazy = false,
+	},
+	{
+		"dccsillag/magma-nvim",
 		lazy = false,
 	},
 }

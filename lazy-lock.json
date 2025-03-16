@@ -17,6 +17,7 @@
   "lazy.nvim": { "branch": "main", "commit": "d8f26efd456190241afd1b0f5235fe6fdba13d4a" },
   "lsp-overloads.nvim": { "branch": "main", "commit": "7d766bfccbff2ab0be8089ea4d1493089f67a408" },
   "lsp_lines.nvim": { "branch": "main", "commit": "a92c755f182b89ea91bd8a6a2227208026f27b4d" },
+  "magma-nvim": { "branch": "main", "commit": "ff3deba8a879806a51c005e50782130246143d06" },
   "markdown-preview.nvim": { "branch": "master", "commit": "a923f5fc5ba36a3b17e289dc35dc17f66d0548ee" },
   "mason.nvim": { "branch": "main", "commit": "e2f7f9044ec30067bc11800a9e266664b88cda22" },
   "menu": { "branch": "main", "commit": "7769b17c2a131108c02b10e9f844e504aa605cc2" },

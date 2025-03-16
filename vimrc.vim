@@ -104,5 +104,5 @@ nnoremap H K
 inoremap <C-m> <cmd>LspOverloadsSignature<CR>
 
 " Treat .h as C header
-let g:c_syntax_for_h = 1
-
+let g:c_syntax_for_h = 0
+autocmd BufNewFile,BufRead *.h setlocal filetype=cpp
