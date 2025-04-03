@@ -1,7 +1,7 @@
 ---@type ChadrcConfig
 local M = {
 	base46 = {
-		theme = "onedark",
+		theme = "my_onedark",
 		hl_override = {
 			NonText = { fg = "light_grey" },
 			LineNr = { fg = "white" },
