@@ -1,12 +1,11 @@
-Theme: onedark
-Set `statusline_bg` to "" in ~/.local/share/nvim/lazy/base46/lua/base46/themes/onedark.lua
-Set `line` to "#51555d"
-
 /usr/share/nvchad/init.lua:
-1. Change NvChad's base46 dir
+1. Change NvChad's base46 dir (vim.fn.stdpath "data" .. "/nvchad/base46/")
 2. Add "custom/plugins" for Lazy setup
 
 /usr/share/nvchad/lua/mappings.lua:
 /usr/share/nvim/runtime/lua/mappings.lua:
-1. Disable default ugly mappings
+1. Disable default ugly mappings (";", "jk", "i")
+
+~/.local/share/nvim/lazy/lsp-overloads.nvim/lua/lsp-overloads/handlers.lua:
+Use fix from ~/.config/nvim/lsp-overloads_handlers.lua (copy the file)
 
