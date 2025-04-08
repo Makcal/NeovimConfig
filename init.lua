@@ -109,3 +109,15 @@ vim.keymap.set(
     { desc = "Toggle lsp_lines" }
 )
 
+
+
+-- GitHub Copilot setup
+-- require("cmp").setup {
+--   -- other setup
+--   sources = {
+--     { name = "copilot" },
+--     { name = "nvim_lsp" },
+--     { name = "luasnip" },
+--     -- other sources
+--   },
+-- }

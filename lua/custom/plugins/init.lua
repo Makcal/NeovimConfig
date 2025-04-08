@@ -55,6 +55,7 @@ local plugins = {
 			-- Disable virtual_text since it's redundant due to lsp_lines.
 			vim.diagnostic.config({
 				virtual_text = false,
+				virtual_lines = true,
 			})
 			require("lsp_lines").setup()
 		end,
@@ -75,6 +76,23 @@ local plugins = {
 	-- 		require("langmapper").setup({--[[ your config ]]
 	-- 		})
 	-- 	end,
+	-- },
+	-- {
+	-- 	"zbirenbaum/copilot-cmp",
+	-- 	event = "InsertEnter",
+	-- 	config = function()
+	-- 		require("copilot_cmp").setup()
+	-- 	end,
+	-- 	dependencies = {
+	-- 		"zbirenbaum/copilot.lua",
+	-- 		cmd = "Copilot",
+	-- 		config = function()
+	-- 			require("copilot").setup({
+	-- 				suggestion = { enabled = false },
+	-- 				panel = { enabled = false },
+	-- 			})
+	-- 		end,
+	-- 	},
 	-- },
 }
 return plugins
