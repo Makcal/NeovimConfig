@@ -1,0 +1,21 @@
+# Run with
+# tar -chf config.tar -T <(grep -oP '^[^#].*$' ./backup_list)
+# gzip -9 config.tar
+
+# NvChad config
+/usr/share/nvim/archlinux.lua.bkp
+
+# SDDM for Hyprland
+/etc/sddm.conf.d/sddm.conf
+/usr/share/wayland-sessions/hyprland.desktop
+
+# VPN scripts
+/home/max/.config/scripts/
+
+# Hyprland + ml4w dotfiles
+--exclude /home/max/.config/ml4w/cache
+/home/max/.config/ml4w/
+/home/max/.config/waybar/
+/home/max/.config/waypaper/
+/home/max/.config/wal/
+/home/max/.config/hypr/
