@@ -1,5 +1,11 @@
 {
     "image": "userver_nvim",
+    "dockerComposeFile": [
+        "../docker-compose.yml",
+        "docker-compose.yml"
+    ],
+    "service": "url_shortener-container",
+    // translate this into docker-compose volumes
     "mounts": [
         "source=/home/max/.config/nvim/init.lua,target=/root/.config/nvim/myinit.lua,type=bind,ro",
         "source=/home/max/.config/nvim/vimrc.vim,target=/root/.config/nvim/vimrc.vim,type=bind,ro",
