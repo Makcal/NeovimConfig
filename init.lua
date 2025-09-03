@@ -44,6 +44,12 @@ local run_commands = {
         pattern = "*.hs",
         get_cmd = function() return "ghc --run " .. vim.fn.expand("%") end,
     },
+    rust = {
+        pattern = "*.rs",
+        get_cmd = function()
+            return "rustc " .. vim.fn.expand("%") .. " -o " .. vim.fn.expand("%:r") .. " && bash -c \"time " .. vim.fn.expand("%:p:r") .. "\""
+        end,
+    },
 }
 
 local group_run = vim.api.nvim_create_augroup("group_run", {})
