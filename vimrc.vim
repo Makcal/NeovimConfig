@@ -106,3 +106,6 @@ inoremap <C-m> <cmd>LspOverloadsSignature<CR>
 " Treat .h as C header
 let g:c_syntax_for_h = 0
 autocmd BufNewFile,BufRead *.h setlocal filetype=cpp
+
+" Remove NvChad's awful mapping
+silent! nunmap ;
