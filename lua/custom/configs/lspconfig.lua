@@ -46,11 +46,11 @@ lspconfig.clangd.setup({
     },
 })
 
-lspconfig.hls.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = { "haskell", "lhaskell" },
-})
+-- lspconfig.hls.setup({
+--     on_attach = on_attach,
+--     capabilities = capabilities,
+--     filetypes = { "haskell", "lhaskell" },
+-- })
 
 -- lspconfig.java_language_server.setup({
 --     on_attach = on_attach,

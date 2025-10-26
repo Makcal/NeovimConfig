@@ -67,6 +67,12 @@ local run_commands = {
 				.. '"'
 		end,
 	},
+	racket = {
+		pattern = "*.rkt",
+		get_cmd = function()
+			return "racket " .. vim.fn.expand("%")
+		end,
+	},
 }
 
 local group_run = vim.api.nvim_create_augroup("group_run", {})
@@ -138,7 +144,7 @@ vim.keymap.set("", "<Leader>l", require("lsp_lines").toggle, { desc = "Toggle ls
 -- Project I language
 vim.filetype.add({
 	extension = {
-		il = "i_lang",
+		impp = "i_lang",
 	},
 })
 vim.api.nvim_create_autocmd("Filetype", {
