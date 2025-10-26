@@ -156,3 +156,6 @@ vim.api.nvim_create_autocmd("Filetype", {
 require("luasnip.loaders.from_vscode").lazy_load({
 	paths = "~/.config/nvim/snippets",
 })
+
+-- obsidian.nvim
+vim.opt.conceallevel = 1
