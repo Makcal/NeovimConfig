@@ -10,15 +10,63 @@ end
 local capabilities = config.capabilities
 capabilities.textDocument.signatureHelp.triggerCharacters = ""
 
-local lspconfig = require("lspconfig")
+vim.lsp.enable('lua_ls')
+vim.lsp.config('lua_ls', {
+  on_init = function(client)
+    if client.workspace_folders then
+      local path = client.workspace_folders[1].name
+      if
+        path ~= vim.fn.stdpath('config')
+        and (vim.uv.fs_stat(path .. '/.luarc.json') or vim.uv.fs_stat(path .. '/.luarc.jsonc'))
+      then
+        return
+      end
+    end
 
-lspconfig.pyright.setup({
+    client.config.settings.Lua = vim.tbl_deep_extend('force', client.config.settings.Lua, {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most
+        -- likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+        -- Tell the language server how to find Lua modules same way as Neovim
+        -- (see `:h lua-module-load`)
+        path = {
+          'lua/?.lua',
+          'lua/?/init.lua',
+        },
+      },
+      -- Make the server aware of Neovim runtime files
+      workspace = {
+        checkThirdParty = false,
+        library = {
+          vim.env.VIMRUNTIME,
+          -- Depending on the usage, you might want to add additional paths
+          -- here.
+          -- '${3rd}/luv/library',
+          -- '${3rd}/busted/library',
+        },
+        -- Or pull in all of 'runtimepath'.
+        -- NOTE: this is a lot slower and will cause issues when working on
+        -- your own configuration.
+        -- See https://github.com/neovim/nvim-lspconfig/issues/3189
+        -- library = vim.api.nvim_get_runtime_file('', true),
+      },
+    })
+  end,
+  settings = {
+    Lua = {},
+  },
+})
+
+vim.lsp.enable('pyright')
+vim.lsp.config('pyright', {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "python" },
 })
 
-lspconfig.clangd.setup({
+vim.lsp.enable('clangd')
+vim.lsp.config('clangd', {
     on_attach = on_attach,
     capabilities = capabilities,
     filetypes = { "c", "cpp" },
@@ -46,25 +94,29 @@ lspconfig.clangd.setup({
     },
 })
 
--- lspconfig.hls.setup({
+-- vim.lsp.enable('hls')
+-- vim.lsp.config('hls', {
 --     on_attach = on_attach,
 --     capabilities = capabilities,
 --     filetypes = { "haskell", "lhaskell" },
 -- })
 
--- lspconfig.java_language_server.setup({
+-- vim.lsp.enable('java_language_server')
+-- vim.lsp.config('java_language_server', {
 --     on_attach = on_attach,
 --     capabilities = capabilities,
 --     filetypes = { "java" },
 --     cmd = { "/home/max/.local/share/nvim/mason/packages/java-language-server/dist/lang_server_linux.sh" },
 -- })
 
-lspconfig.cmake.setup({
+vim.lsp.enable('cmake')
+vim.lsp.config('cmake', {
     on_attach = on_attach,
     capabilities = capabilities,
 })
 
-lspconfig.rust_analyzer.setup({
+vim.lsp.enable('rust_analyzer')
+vim.lsp.config('rust_analyzer', {
     on_attach = on_attach,
     capabilities = capabilities,
     settings = {

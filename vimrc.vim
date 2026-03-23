@@ -109,3 +109,9 @@ autocmd BufNewFile,BufRead *.h setlocal filetype=cpp
 
 " Remove NvChad's awful mapping
 silent! nunmap ;
+
+" Shortcut
+nmap ` @q
+
+" Erros and warnings
+nmap <leader>fd :Telescope diagnostics<CR>

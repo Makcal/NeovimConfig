@@ -10,7 +10,6 @@ local plugins = {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			require("configs.lspconfig")
 			require("custom.configs.lspconfig")
 		end,
 	},
@@ -174,7 +173,7 @@ local plugins = {
 	},
 	{
 		"mrcjkb/haskell-tools.nvim",
-		version = "^6", -- Recommended
+		version = "^7", -- Recommended
 		lazy = false, -- This plugin is already lazy
 		config = function()
 			vim.keymap.set("n", "<space>ca", vim.lsp.codelens.run)

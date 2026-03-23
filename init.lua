@@ -159,3 +159,9 @@ require("luasnip.loaders.from_vscode").lazy_load({
 
 -- obsidian.nvim
 vim.opt.conceallevel = 1
+
+-- Auto-sync with system clipboard
+-- vim.opt.clipboard = 'unnamedplus'
+
+-- Popup windows (e.g. LSP hover) with border
+vim.o.winborder = "rounded"
